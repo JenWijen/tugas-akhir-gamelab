@@ -9,12 +9,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Starter Page</h1>
+            <h1 class="m-0">Admin Page</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Starter Page</li>
+              <li class="breadcrumb-item active">Pilih Tabel</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -22,7 +22,7 @@
     </div>
     <!-- /.content-header -->
 
-    <!-- Main content -->
+    {{-- <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
         <div class="row">
@@ -79,7 +79,41 @@
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
+          </div> --}}
+          <!-- Main content -->
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="card card-primary card-outline">
+          <div class="card-body">
+            <h1 class="">Daftar Kategori</h1>
+            <h5 class="card-title">Total Kategori</h5>
+            <p class="card-text">
+              Jumlah kategori: {{ \App\Models\Kategori::count() }}
+            </p>
+            <a href="{{ route('daftarKategori') }}" class="card-link">Lihat Detail</a>
           </div>
+        </div>
+
+        <div class="card card-primary card-outline">
+          <div class="card-body">
+            <h1 class="">Daftar Artikel</h1>
+            <h5 class="card-title">Total Artikel</h5>
+            <p class="card-text">
+              Jumlah artikel: {{ \App\Models\Artikel::count() }}
+            </p>
+            <a href="{{ route('daftarArtikel') }}" class="card-link">Lihat Detail</a>
+          </div>
+        </div><!-- /.card -->
+      </div>
+      <!-- /.col-md-6 -->
+      <!-- Other content here... -->
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content -->
           <!-- /.col-md-6 -->
         </div>
         <!-- /.row -->
